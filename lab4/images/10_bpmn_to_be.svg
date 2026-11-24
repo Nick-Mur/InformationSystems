@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2260 930" width="2260" height="930">
+  <defs>
+    <style>
+      .bg { fill: #FFFFFF; }
+      .title { font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 700; fill: #181818; text-anchor: middle; }
+      .pool-hdr { fill: #F3F4F6; stroke: #181818; stroke-width: 1.4; }
+      .pool-hdr-txt { font-family: Arial, Helvetica, sans-serif; font-size: 12.5px; font-weight: 700; fill: #181818; text-anchor: middle; }
+      .lane-hdr { fill: #F9FAFB; stroke: #181818; stroke-width: 1.1; }
+      .lane-body { fill: #FFFFFF; stroke: #181818; stroke-width: 1; }
+      .lane-txt { font-family: Arial, Helvetica, sans-serif; font-size: 11.5px; font-weight: 700; fill: #181818; text-anchor: middle; }
+      .ext-pool { fill: #FFFFFF; stroke: #181818; stroke-width: 1.4; }
+      .ext-txt { font-family: Arial, Helvetica, sans-serif; font-size: 12.5px; font-weight: 700; fill: #181818; text-anchor: middle; }
+      .task { fill: #FFFFFF; stroke: #181818; stroke-width: 1.3; rx: 8; }
+      .task-txt { font-family: Arial, Helvetica, sans-serif; font-size: 11.5px; fill: #181818; text-anchor: middle; }
+      .ev-start { fill: #FFFFFF; stroke: #181818; stroke-width: 1.5; }
+      .ev-inter { fill: #FFFFFF; stroke: #181818; stroke-width: 1.4; }
+      .ev-end { fill: #FFFFFF; stroke: #181818; stroke-width: 3.2; }
+      .ev-lbl { font-family: Arial, Helvetica, sans-serif; font-size: 10.5px; fill: #181818; text-anchor: middle; }
+      .gw { fill: #FFFFFF; stroke: #181818; stroke-width: 1.4; }
+      .gw-x { font-family: Arial, Helvetica, sans-serif; font-size: 17px; font-weight: 700; fill: #181818; text-anchor: middle; }
+      .gw-lbl { font-family: Arial, Helvetica, sans-serif; font-size: 10.5px; fill: #181818; text-anchor: middle; }
+      .flow { stroke: #181818; stroke-width: 1.3; fill: none; }
+      .msg { stroke: #181818; stroke-width: 1.1; stroke-dasharray: 5 4; fill: none; }
+      .br-lbl { font-family: Arial, Helvetica, sans-serif; font-size: 10.5px; fill: #181818; }
+      .br-bg { fill: #FFFFFF; }
+    </style>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#181818"/>
+    </marker>
+    <marker id="msg-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#FFFFFF" stroke="#181818" stroke-width="1.2"/>
+    </marker>
+    <marker id="msg-start" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="6" markerHeight="6">
+      <circle cx="4" cy="4" r="2.8" fill="#FFFFFF" stroke="#181818" stroke-width="1.1"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="2260" height="930"/>
+  <text x="1130" y="28" class="title">BPMN 2.0 (TO-BE) — Сборка и отгрузка заказа ООО «Хозторг»</text>
+
+  <!-- ==================== TOP EXTERNAL POOL: КЛИЕНТ ==================== -->
+  <rect x="25" y="48" width="2210" height="44" class="ext-pool"/>
+  <text x="1130" y="75" class="ext-txt">Клиент</text>
+
+  <!-- ==================== MAIN POOL ==================== -->
+  <rect x="25" y="126" width="40" height="680" class="pool-hdr"/>
+  <text x="45" y="466" class="pool-hdr-txt" transform="rotate(-90 45 466)">Сборка и отгрузка заказа (ООО «Хозторг»)</text>
+
+  <!-- Lane 1: Менеджер по продажам -->
+  <rect x="65" y="126" width="54" height="152" class="lane-hdr"/>
+  <text x="92" y="202" class="lane-txt" transform="rotate(-90 92 202)">Менеджер продаж</text>
+  <rect x="119" y="126" width="2116" height="152" class="lane-body"/>
+
+  <!-- Lane 2: ИС 1С:УТ 8 -->
+  <rect x="65" y="278" width="54" height="232" class="lane-hdr"/>
+  <text x="92" y="394" class="lane-txt" transform="rotate(-90 92 394)">ИС «1С:УТ 8»</text>
+  <rect x="119" y="278" width="2116" height="232" class="lane-body"/>
+
+  <!-- Lane 3: Кладовщик (ТСД) -->
+  <rect x="65" y="510" width="54" height="155" class="lane-hdr"/>
+  <text x="92" y="588" class="lane-txt" transform="rotate(-90 92 588)">Кладовщик (ТСД)</text>
+  <rect x="119" y="510" width="2116" height="155" class="lane-body"/>
+
+  <!-- Lane 4: Бухгалтер -->
+  <rect x="65" y="665" width="54" height="141" class="lane-hdr"/>
+  <text x="92" y="736" class="lane-txt" transform="rotate(-90 92 736)">Бухгалтер</text>
+  <rect x="119" y="665" width="2116" height="141" class="lane-body"/>
+
+  <!-- ==================== BOTTOM EXTERNAL POOLS ==================== -->
+  <rect x="1340" y="846" width="320" height="48" class="ext-pool"/>
+  <text x="1500" y="875" class="ext-txt">Оператор ЭДО + «Честный знак»</text>
+
+  <rect x="1810" y="846" width="425" height="48" class="ext-pool"/>
+  <text x="2022" y="875" class="ext-txt">1С:Бухгалтерия</text>
+
+  <!-- ==================== LANE 1 ==================== -->
+  <!-- Start Message Event (white envelope) -->
+  <circle cx="165" cy="202" r="17" class="ev-start"/>
+  <rect x="157" y="196" width="16" height="11" fill="#FFFFFF" stroke="#181818" stroke-width="1.1"/>
+  <path d="M 157 196 L 165 202.5 L 173 196" fill="none" stroke="#181818" stroke-width="1.1"/>
+  <text x="165" y="236" class="ev-lbl">Поступил</text>
+  <text x="165" y="249" class="ev-lbl">заказ</text>
+
+  <rect x="218" y="172" width="142" height="60" class="task"/>
+  <text x="289" y="198" class="task-txt">Сформировать</text>
+  <text x="289" y="214" class="task-txt">заказ клиента</text>
+
+  <rect x="418" y="172" width="160" height="60" class="task"/>
+  <text x="498" y="198" class="task-txt">Отменить заказ и</text>
+  <text x="498" y="214" class="task-txt">уведомить клиента</text>
+
+  <circle cx="632" cy="202" r="17" class="ev-end"/>
+  <text x="632" y="236" class="ev-lbl">Заказ</text>
+  <text x="632" y="249" class="ev-lbl">отменён</text>
+
+  <rect x="1990" y="172" width="148" height="60" class="task"/>
+  <text x="2064" y="198" class="task-txt">Уведомить клиента</text>
+  <text x="2064" y="214" class="task-txt">об отгрузке</text>
+
+  <circle cx="2184" cy="202" r="17" class="ev-end"/>
+  <text x="2184" y="236" class="ev-lbl">Заказ</text>
+  <text x="2184" y="249" class="ev-lbl">закрыт</text>
+
+  <!-- ==================== LANE 2 (ИС 1С:УТ 8) ==================== -->
+  <rect x="218" y="362" width="142" height="64" class="task"/>
+  <text x="289" y="390" class="task-txt">Проверить остатки</text>
+  <text x="289" y="406" class="task-txt">и зарезервировать</text>
+
+  <!-- XOR 1: Split -->
+  <polygon points="422,371 445,394 422,417 399,394" class="gw"/>
+  <text x="422" y="400" class="gw-x">×</text>
+  <text x="422" y="435" class="gw-lbl">В наличии и</text>
+  <text x="422" y="448" class="gw-lbl">резерв активен?</text>
+
+  <rect x="488" y="362" width="164" height="64" class="task"/>
+  <text x="570" y="384" class="task-txt">Сформировать задание</text>
+  <text x="570" y="400" class="task-txt">на ТСД с адресами</text>
+  <text x="570" y="416" class="task-txt">ячеек хранения</text>
+
+  <rect x="730" y="362" width="158" height="64" class="task"/>
+  <text x="809" y="390" class="task-txt">Проверить штрихкоды</text>
+  <text x="809" y="406" class="task-txt">ячейки и товара</text>
+
+  <!-- XOR 2: Split -->
+  <polygon points="946,371 969,394 946,417 923,394" class="gw"/>
+  <text x="946" y="400" class="gw-x">×</text>
+  <text x="946" y="356" class="gw-lbl">Сборка корректна?</text>
+
+  <rect x="1012" y="362" width="140" height="64" class="task"/>
+  <text x="1082" y="390" class="task-txt">Сформировать</text>
+  <text x="1082" y="406" class="task-txt">документ отгрузки</text>
+
+  <!-- XOR 3: Split -->
+  <polygon points="1208,371 1231,394 1208,417 1185,394" class="gw"/>
+  <text x="1208" y="400" class="gw-x">×</text>
+  <text x="1208" y="435" class="gw-lbl">Есть маркированные</text>
+  <text x="1208" y="448" class="gw-lbl">товары?</text>
+
+  <!-- XOR_M2: Merge before EDO send -->
+  <polygon points="1284,374 1304,394 1284,414 1264,394" class="gw"/>
+  <text x="1284" y="400" class="gw-x">×</text>
+
+  <!-- T7: Send UPD to EDO -->
+  <rect x="1334" y="362" width="158" height="64" class="task"/>
+  <text x="1413" y="390" class="task-txt">Сформировать УПД и</text>
+  <text x="1413" y="406" class="task-txt">отправить коды в ЭДО</text>
+
+  <!-- Intermediate Message Catch Event: Получена квитанция от ЭДО -->
+  <circle cx="1546" cy="394" r="18" class="ev-inter"/>
+  <circle cx="1546" cy="394" r="14.5" class="ev-inter"/>
+  <rect x="1538" y="388.5" width="16" height="11" fill="#FFFFFF" stroke="#181818" stroke-width="1.1"/>
+  <path d="M 1538 388.5 L 1546 394.5 L 1554 388.5" fill="none" stroke="#181818" stroke-width="1.1"/>
+  <text x="1546" y="352" class="ev-lbl">Получена</text>
+  <text x="1546" y="364" class="ev-lbl">квитанция ЭДО</text>
+
+  <!-- XOR 4: Split -->
+  <polygon points="1636,371 1659,394 1636,417 1613,394" class="gw"/>
+  <text x="1636" y="400" class="gw-x">×</text>
+  <text x="1636" y="346" class="gw-lbl">Документ</text>
+  <text x="1636" y="359" class="gw-lbl">принят ЭДО?</text>
+
+  <!-- XOR_M3: Merge before Post Shipment -->
+  <polygon points="1724,374 1744,394 1724,414 1704,394" class="gw"/>
+  <text x="1724" y="400" class="gw-x">×</text>
+
+  <!-- T8: Post shipment -->
+  <rect x="1776" y="360" width="156" height="68" class="task"/>
+  <text x="1854" y="382" class="task-txt">Провести отгрузку,</text>
+  <text x="1854" y="398" class="task-txt">списать остатки и</text>
+  <text x="1854" y="414" class="task-txt">записать в журнал</text>
+
+  <!-- T9: Sync with 1C:Accounting -->
+  <rect x="1962" y="362" width="134" height="64" class="task"/>
+  <text x="2029" y="390" class="task-txt">Передать документ</text>
+  <text x="2029" y="406" class="task-txt">в 1С:Бухгалтерию</text>
+
+  <!-- ==================== LANE 3 (КЛАДОВЩИК + ТСД) ==================== -->
+  <!-- XOR_M1: Merge before picking -->
+  <polygon points="570,568 590,588 570,608 550,588" class="gw"/>
+  <text x="570" y="594" class="gw-x">×</text>
+
+  <rect x="622" y="554" width="172" height="68" class="task"/>
+  <text x="708" y="578" class="task-txt">Найти по адресу ячейки,</text>
+  <text x="708" y="594" class="task-txt">сканировать ячейку и</text>
+  <text x="708" y="610" class="task-txt">товар на ТСД</text>
+
+  <rect x="2062" y="556" width="136" height="64" class="task"/>
+  <text x="2130" y="584" class="task-txt">Передать собранный</text>
+  <text x="2130" y="600" class="task-txt">заказ клиенту</text>
+
+  <!-- ==================== LANE 4 (БУХГАЛТЕР — обработка ошибок ЭДО) ==================== -->
+  <rect x="1205" y="704" width="156" height="64" class="task"/>
+  <text x="1283" y="732" class="task-txt">Исправить ошибки</text>
+  <text x="1283" y="748" class="task-txt">УПД / маркировки</text>
+
+  <!-- ==================== SEQUENCE FLOWS ==================== -->
+  <path d="M 182 202 L 218 202" class="flow" marker-end="url(#arr)"/>
+  <path d="M 289 232 L 289 362" class="flow" marker-end="url(#arr)"/>
+  <path d="M 360 394 L 399 394" class="flow" marker-end="url(#arr)"/>
+
+  <!-- XOR 1 -> Cancel -->
+  <path d="M 422 371 L 422 256 L 498 256 L 498 232" class="flow" marker-end="url(#arr)"/>
+  <rect x="382" y="302" width="84" height="15" class="br-bg"/>
+  <text x="386" y="313" class="br-lbl">Нет / истёк</text>
+  <path d="M 578 202 L 615 202" class="flow" marker-end="url(#arr)"/>
+
+  <!-- XOR 1 -> T3 (default flow tick) -->
+  <path d="M 445 394 L 488 394" class="flow" marker-end="url(#arr)"/>
+  <line x1="452" y1="399" x2="459" y2="389" stroke="#181818" stroke-width="1.3"/>
+  <text x="462" y="385" class="br-lbl">Да</text>
+
+  <!-- T3 -> XOR_M1 -> T4 -> T5 -> XOR 2 -->
+  <path d="M 570 426 L 570 568" class="flow" marker-end="url(#arr)"/>
+  <path d="M 590 588 L 622 588" class="flow" marker-end="url(#arr)"/>
+  <path d="M 794 588 L 815 588 L 815 426" class="flow" marker-end="url(#arr)"/>
+  <path d="M 888 394 L 923 394" class="flow" marker-end="url(#arr)"/>
+
+  <!-- XOR 2 -> Loop to XOR_M1 -->
+  <path d="M 946 417 L 946 646 L 570 646 L 570 608" class="flow" marker-end="url(#arr)"/>
+  <rect x="735" y="637" width="130" height="15" class="br-bg"/>
+  <text x="739" y="648" class="br-lbl">Нет (расхождение)</text>
+
+  <!-- XOR 2 -> T6 (default flow tick) -->
+  <path d="M 969 394 L 1012 394" class="flow" marker-end="url(#arr)"/>
+  <line x1="976" y1="399" x2="983" y2="389" stroke="#181818" stroke-width="1.3"/>
+  <text x="986" y="385" class="br-lbl">Да</text>
+
+  <path d="M 1152 394 L 1185 394" class="flow" marker-end="url(#arr)"/>
+
+  <!-- XOR 3 -> Нет (bypass to XOR_M3) -->
+  <path d="M 1208 371 L 1208 312 L 1724 312 L 1724 374" class="flow" marker-end="url(#arr)"/>
+  <line x1="1203" y1="362" x2="1213" y2="355" stroke="#181818" stroke-width="1.3"/>
+  <rect x="1445" y="303" width="32" height="15" class="br-bg"/>
+  <text x="1450" y="314" class="br-lbl">Нет</text>
+
+  <!-- XOR 3 -> Да -> XOR_M2 -> T7 -> Intermediate Event -> XOR 4 -->
+  <path d="M 1231 394 L 1264 394" class="flow" marker-end="url(#arr)"/>
+  <text x="1238" y="385" class="br-lbl">Да</text>
+  <path d="M 1304 394 L 1334 394" class="flow" marker-end="url(#arr)"/>
+  <path d="M 1492 394 L 1528 394" class="flow" marker-end="url(#arr)"/>
+  <path d="M 1564 394 L 1613 394" class="flow" marker-end="url(#arr)"/>
+
+  <!-- XOR 4 -> Да -> XOR_M3 -> T8 (default flow tick) -->
+  <path d="M 1659 394 L 1704 394" class="flow" marker-end="url(#arr)"/>
+  <line x1="1666" y1="399" x2="1673" y2="389" stroke="#181818" stroke-width="1.3"/>
+  <text x="1676" y="385" class="br-lbl">Да</text>
+  <path d="M 1744 394 L 1776 394" class="flow" marker-end="url(#arr)"/>
+
+  <!-- XOR 4 -> Нет -> Бухгалтер (Lane 4) -> XOR_M2 -->
+  <path d="M 1636 417 L 1636 736 L 1361 736" class="flow" marker-end="url(#arr)"/>
+  <rect x="1642" y="554" width="110" height="15" class="br-bg"/>
+  <text x="1646" y="565" class="br-lbl">Нет (ошибка ЭДО)</text>
+  <path d="M 1284 704 L 1284 414" class="flow" marker-end="url(#arr)"/>
+
+  <!-- T8 -> T9 -> T10 -> T11 -> End -->
+  <path d="M 1932 394 L 1962 394" class="flow" marker-end="url(#arr)"/>
+  <path d="M 2096 394 L 2130 394 L 2130 556" class="flow" marker-end="url(#arr)"/>
+  <path d="M 2198 588 L 2216 588 L 2216 298 L 2064 298 L 2064 232" class="flow" marker-end="url(#arr)"/>
+  <path d="M 2138 202 L 2167 202" class="flow" marker-end="url(#arr)"/>
+
+  <!-- ==================== MESSAGE FLOWS ==================== -->
+  <path d="M 165 92 L 165 185" class="msg" marker-start="url(#msg-start)" marker-end="url(#msg-arr)"/>
+  <path d="M 498 172 L 498 92" class="msg" marker-start="url(#msg-start)" marker-end="url(#msg-arr)"/>
+  <path d="M 2064 172 L 2064 92" class="msg" marker-start="url(#msg-start)" marker-end="url(#msg-arr)"/>
+
+  <!-- T7 -> EDO -->
+  <path d="M 1413 426 L 1413 846" class="msg" marker-start="url(#msg-start)" marker-end="url(#msg-arr)"/>
+  <rect x="1378" y="814" width="70" height="15" class="br-bg"/>
+  <text x="1413" y="825" class="gw-lbl">УПД + коды</text>
+
+  <!-- EDO -> Intermediate Event -->
+  <path d="M 1546 846 L 1546 412" class="msg" marker-start="url(#msg-start)" marker-end="url(#msg-arr)"/>
+  <rect x="1512" y="814" width="68" height="15" class="br-bg"/>
+  <text x="1546" y="825" class="gw-lbl">Квитанция</text>
+
+  <!-- T9 -> 1C:Accounting -->
+  <path d="M 2029 426 L 2029 846" class="msg" marker-start="url(#msg-start)" marker-end="url(#msg-arr)"/>
+  <rect x="1967" y="814" width="124" height="15" class="br-bg"/>
+  <text x="2029" y="825" class="gw-lbl">Документ отгрузки</text>
+</svg>
